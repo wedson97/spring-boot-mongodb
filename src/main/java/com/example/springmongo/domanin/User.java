@@ -3,10 +3,16 @@ package com.example.springmongo.domanin;
 import java.io.Serializable;
 import java.util.Objects;
 
+import org.springframework.data.annotation.Id;
+import org.springframework.data.mongodb.core.mapping.Document;
+
+@Document
 public class User implements Serializable{
 	private static final long serialVersionUID = 1L;
 	
-	private String id, nome, email;
+	@Id
+	private String id;
+	private String nome, email;
 	
 	public User() {
 	}
